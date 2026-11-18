@@ -1,0 +1,30 @@
+{
+  "name": "@tokenring-ai/dashboard",
+  "version": "0.1.0",
+  "description": "Persists per-user dashboard layouts for the TokenRing One frontend.",
+  "type": "module",
+  "main": "index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "test": "bun test",
+    "build": "tsc --noEmit",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage"
+  },
+  "keywords": ["tokenring", "dashboard", "layout"],
+  "author": "TokenRing",
+  "license": "MIT",
+  "dependencies": {
+    "@tokenring-ai/app": "workspace:*",
+    "@tokenring-ai/rpc": "workspace:*",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  },
+  "exports": {
+    ".": "./index.ts",
+    "./rpc/schema": "./rpc/schema.ts",
+    "./*": "./*.ts"
+  }
+}
